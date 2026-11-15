@@ -1,6 +1,6 @@
 # Awesome-Enterprise-Data-Governance-Information-Management
 
-# Top Enterprise Data Governance & Information Management Ecosystem
+## Top Enterprise Data Governance & Information Management Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on Data Catalogs, Policy Enforcement & Self-Hosted Metadata Management*  
