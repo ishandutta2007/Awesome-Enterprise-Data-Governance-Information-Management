@@ -7,7 +7,7 @@
 **Curated Landscape of Enterprise SaaS Platforms & Open-Source Projects for Data Catalogs, Lineage, Metadata, Quality, & AI Trust Governance**
 
 [![Awesome](https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)<a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management?style=social)](https://github.com/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management/stargazers)
+[![GitHub_Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management?style=social)](https://github.com/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management?style=social)](https://github.com/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management/network/members)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-Enterprise-Data-Governance-Information-Management/blob/main/CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -60,9 +60,9 @@ The sector's competitive structure is **moderately concentrated to medium fragme
 
 ## 🔓 Open-Source GitHub Projects
 
-> Active, production-ready open-source platforms and tools for metadata management, data discovery, quality assertions, access control, and pipeline lineage. Sorted by **GitHub Star Count** (descending).
+> Active, production-ready open-source platforms and tools for metadata management, data discovery, quality assertions, access control, and pipeline lineage. Sorted by **GitHub Stars_Count** (descending).
 
-| Project | Stars | Primary Focus | Description |
+| Project | GitHub_Stars | Primary Focus | Description |
 |---|---|---|---|
 | **[OpenMetadata](https://github.com/open-metadata/OpenMetadata)** | [![Stars](https://img.shields.io/github/stars/open-metadata/OpenMetadata?style=social&color=white)](https://github.com/open-metadata/OpenMetadata/stargazers) | Unified Metadata & Contracts | **Unified open-source metadata platform with column-level lineage and data contracts.** Centralized metadata repository with automated data discovery, end-to-end lineage, team collaboration workflows, sensitive PII auto-tagging, and native data quality tests. Built on Apache 2.0. |
 | **[DataHub](https://github.com/datahub-project/datahub)** | [![Stars](https://img.shields.io/github/stars/datahub-project/datahub?style=social&color=white)](https://github.com/datahub-project/datahub/stargazers) | Modern Extensible Metadata | **LinkedIn's modern, real-time metadata platform.** API-first architecture powered by GraphQL and Kafka streaming ingestion. Provides full-text search, column-level graph lineage, impact analysis, access management integration, and robust support for modern data stack connectors. |
@@ -91,7 +91,7 @@ Contributions are warmly welcomed! Help keep this enterprise data governance res
 3. **Add or modify entries** in `README.md` maintaining standard tabular structure:
    - Provide clean markdown links to the project/product.
    - For SaaS products: supply specific starting tier prices, clear trial/free terms, and company valuation/revenue context.
-   - For open-source tools: supply an official GitHub star badge (`style=social&color=white`) linking to its stargazers page.
+   - For open-source tools: supply an official GitHub Stars_Badge (`style=social&color=white`) linking to its stargazers page.
 4. **Commit your changes**:
    ```bash
    git commit -m "Add [Tool Name]: brief rationale"
