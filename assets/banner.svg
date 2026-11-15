@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0a101d" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Glowing Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Circuit Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="40" cy="40" r="1.5" fill="#38bdf8" opacity="0.3" />
+    </pattern>
+
+    <style>
+      .title-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+      }
+      
+      /* Dynamic Ambient Animations */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.08); }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes flowData {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes orbitParticle {
+        0% { transform: rotate(0deg) translateX(45px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(45px) rotate(-360deg); }
+      }
+
+      .pulse-orb-1 {
+        animation: pulseGlow 8s ease-in-out infinite;
+        transform-origin: 200px 100px;
+      }
+      .pulse-orb-2 {
+        animation: pulseGlow 10s ease-in-out infinite 3s;
+        transform-origin: 1000px 320px;
+      }
+      .floating-card {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .floating-card-alt {
+        animation: floatSlow 7s ease-in-out infinite 1.5s;
+      }
+      .data-stream {
+        stroke-dasharray: 8 12;
+        animation: flowData 12s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#gridPattern)" />
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g class="pulse-orb-1">
+    <circle cx="220" cy="110" r="140" fill="#38bdf8" opacity="0.12" filter="url(#softGlow)" />
+  </g>
+  <g class="pulse-orb-2">
+    <circle cx="980" cy="300" r="160" fill="#818cf8" opacity="0.12" filter="url(#softGlow)" />
+    <circle cx="600" cy="50" r="110" fill="#c084fc" opacity="0.08" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Flowing Network Curves in Background -->
+  <g opacity="0.4">
+    <path class="data-stream" d="M 50 340 C 300 340, 350 380, 600 380 C 850 380, 950 340, 1150 340" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <path class="data-stream" d="M 50 80 C 250 80, 380 40, 600 40 C 820 40, 950 80, 1150 80" fill="none" stroke="#818cf8" stroke-width="1.8" />
+    <path class="data-stream" d="M 100 210 C 350 290, 850 130, 1100 210" fill="none" stroke="#c084fc" stroke-width="1.2" />
+  </g>
+
+  <!-- Interactive Decorative Glass Cards (Bottom Area) -->
+  <g class="floating-card" transform="translate(140, 310)">
+    <rect width="180" height="48" rx="24" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="24" cy="24" r="8" fill="#38bdf8" opacity="0.8" />
+    <text x="44" y="29" fill="#e2e8f0" class="badge-text">Data Catalogs</text>
+  </g>
+
+  <g class="floating-card-alt" transform="translate(350, 310)">
+    <rect width="210" height="48" rx="24" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="24" cy="24" r="8" fill="#818cf8" opacity="0.8" />
+    <text x="44" y="29" fill="#e2e8f0" class="badge-text">Metadata Lineage</text>
+  </g>
+
+  <g class="floating-card" transform="translate(590, 310)">
+    <rect width="230" height="48" rx="24" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="24" cy="24" r="8" fill="#c084fc" opacity="0.8" />
+    <text x="44" y="29" fill="#e2e8f0" class="badge-text">Quality &amp; Contracts</text>
+  </g>
+
+  <g class="floating-card-alt" transform="translate(850, 310)">
+    <rect width="210" height="48" rx="24" fill="url(#cardGrad)" stroke="#34d399" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="24" cy="24" r="8" fill="#34d399" opacity="0.8" />
+    <text x="44" y="29" fill="#e2e8f0" class="badge-text">Privacy &amp; Security</text>
+  </g>
+
+  <!-- Main Hero Content (Forefront, Crystal Clear) -->
+  <g transform="translate(600, 130)" text-anchor="middle">
+    <!-- Top Category Pill -->
+    <rect x="-140" y="-55" width="280" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+    <text x="0" y="-35" fill="#38bdf8" class="badge-text" text-anchor="middle">ENTERPRISE DATA ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="25" fill="url(#titleGrad)" class="title-text" filter="url(#glow)">
+      Awesome Data Governance
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="70" class="subtitle-text">
+      Curated Enterprise Information Management, Data Catalogs &amp; Open Source Lineage
+    </text>
+    
+    <!-- Tagline -->
+    <text x="0" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="14px" fill="#64748b" font-weight="500">
+      SaaS Market Leaders • Self-Hosted Catalogs • Data Quality • DSPM &amp; Privacy Compliance
+    </text>
+  </g>
+
+  <!-- Clean Border Outline -->
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="12" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.6" />
+</svg>
